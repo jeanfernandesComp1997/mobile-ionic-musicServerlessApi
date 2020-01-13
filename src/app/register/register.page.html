@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Registrar-se
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <form>
+    <ion-grid text-center id="sub-title">
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input [(ngModel)]="form.email" name="email" color="black" type="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input [(ngModel)]="form.password" name="password" color="black" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button (click)="registerUser()" color="success" expand="block">Registrar-se</ion-button>
+  </form>
+
+
+  <ion-grid text-center id="sub-title">
+    <ion-row>
+      <ion-col><a routerLink="" routerDirection="forward">Entrar com o facebook</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

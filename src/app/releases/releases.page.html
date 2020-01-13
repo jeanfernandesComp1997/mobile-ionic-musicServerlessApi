@@ -4,24 +4,24 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Lançamentos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="https://i.scdn.co/image/af9227d9f9a0da062616500d3c490409b7ce82c6"/>
+  <ion-searchbar placeholder="Pesquisar" (ionInput)="setFiltered($event)" showCancelButton="focus" (ionCancel)="clear()"></ion-searchbar>
+  <ion-card *ngFor="let music of musics">
+    <img src="{{music.Image}}" />
     <ion-card-header>
-      <ion-card-subtitle>Destination</ion-card-subtitle>
-      <ion-card-title>Madison, WI</ion-card-title>
+      <ion-card-subtitle>{{music.Artist}}</ion-card-subtitle>
+      <ion-card-title>{{music.Name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin
-      Territory in 1836.
+       Data de lançamento: {{music.Date}}
       <br>
       <ion-button color="success" expand="block">Ouvir</ion-button>
     </ion-card-content>
-    
+
   </ion-card>
 </ion-content>

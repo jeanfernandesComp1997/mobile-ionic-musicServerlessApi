@@ -1,0 +1,46 @@
+<ion-content class="ion-padding">
+
+  <div>
+    <img src="" alt="">
+  </div>
+
+  <ion-grid text-center id="header">
+    <ion-row>
+      <ion-col id="title">Music App</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form>
+    <ion-grid text-center id="sub-title">
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input [(ngModel)]="form.email" name="email" color="black" type="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input [(ngModel)]="form.password" name="password" color="black" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button (click)="login()" color="success" expand="block">Entrar</ion-button>
+  </form>
+
+
+  <ion-grid text-center id="sub-title">
+    <ion-row>
+      <ion-col>Não possui uma conta ? <a routerLink="/register" routerDirection="forward">Registre-se Aqui !</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
